@@ -1,0 +1,50 @@
+/*
+StAuth10244: I Agam Singh, 000903500 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else.
+*/
+
+body{
+    background-color: lightskyblue;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.dice {
+    width: 70px;
+    height: 70px;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: bold;
+    background-color: royalblue;
+    color: white;
+    margin: 10px;
+}
+.dice:hover {
+    cursor: pointer;
+}
+.button {
+    margin: 10px;
+    padding: 10px 16px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: yellow;
+    color: green;
+}
+.button:hover {
+    background-color: black;
+}
+.label {
+    font-size: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}

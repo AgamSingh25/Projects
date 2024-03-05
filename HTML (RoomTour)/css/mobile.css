@@ -1,0 +1,22 @@
+@media only screen and (max-width: 600px)
+{
+	nav{
+	    display: block;
+       }
+
+    nav li{
+		   display: block;
+           position: relative;
+           text-align: center;
+          }
+		  
+	.apartmentmap img{
+		              display: none;
+	                  }
+					  
+	.gridcontainer{
+		           display: block;
+	              }
+
+
+}

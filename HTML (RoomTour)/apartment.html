@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+	<html lang = "en">
+		<head>
+			<!--Agam Singh, 000903500-->
+			<meta charset = "UTF-8">
+			<title>Sandy and Leslie's apartment</title>
+			<style>
+				.gridcontainer{
+				              display: grid;
+							  grid-template-columns: auto auto auto;
+							  gap: 20px;
+							  }
+							  
+				.left1{
+				       grid-row: 1;
+					   grid-column: 1;
+					  }
+					  
+				.middle1{
+				         grid-column: 2;
+						 grid-row: 1;
+						}
+						
+				.right1{
+				       grid-column: 3;
+					   grid-row: 1;
+					   }
+					   
+				.left2{
+				       grid-column: 1 / span 3;
+					   grid-row: 2;
+					  }
+					  
+				.left2 figcaption{
+				                  background-color: orange;
+						          color: white;
+						         }
+					  
+				.end{
+	                 grid-column: 1 / span 3;
+					 grid-row: 3;
+					 text-align: center;
+                    }
+					
+				.gallery{
+				         display: flex;
+						 flex-wrap: wrap;
+						 gap: 100px;
+						}
+			</style>
+			<link rel = "stylesheet" href = "css/apartment_layout.css">
+			<link rel = "stylesheet" href = "css/print_apartment.css">
+			<link rel = "stylesheet" href = "css/mobile.css">
+		</head>
+		
+		<body>
+			
+			<div class = "apartmentmap">
+				<header>
+					<h1>Sandy and Leslie's Apartment</h1>
+					<figcaption>Click a room for a detailed view</figcaption>
+					<img src = "images/apartmentfloorplan.jpg" alt = "floorplan" usemap = "#floormap">				
+				</header>
+				
+				<map name = "floormap">
+					<area shape = "poly" coords = "387,105,392,235,494,239,500,308,581,309,555,100" alt = "bedroom" href = "bedroom.html">
+					<area shape = "rect" coords = "25,264,193,104" alt = "bedroom" href = "bedroom.html">
+					<area shape = "rect" coords = "192,272,347,114" alt = "livingroom" href = "livingroom.html">
+					<area shape = "rect" coords = "185,286,291,390" alt = "kitchen" href = "kitchen.html">
+					<area shape = "circle" coords = "343,340,382,346" alt = "diningroom" href = "diningroom.html">
+				</map>
+				
+				<nav>
+					<ul>
+						<li> <a href = "apartment.html"> Apartment | </a></li>
+						<li> <a href = "bedroom.html">  Bedroom 1 | </a></li>
+						<li> <a href = "bedroom.html">  Bedroom 2 | </a></li>
+						<li> <a href = "diningroom.html">  Dining Room | </a></li>
+						<li> <a href = "kitchen.html">  Kitchen | </a></li>
+						<li> <a href = "livingroom.html">  Living Room </a></li>
+					</ul>
+				</nav>
+			</div><!--apartmentmap closed-->
+			
+			<div class = "gridcontainer">
+			<div class = "left1">
+				<h2>Welcome Message</h2>
+				<audio controls>
+				
+					<source src = "audio/apartment.mp3" type = "audio/mp3">
+					
+				</audio>
+				
+				<p>Transcript: Hello. Welcome to our apartment. You'll really enjoy living here. The rooms are spacious and the apartment building amenities are fantastic. We look forward to hearing from you! </p>
+				
+				<h2>Survey</h2>
+				<p>How did you find out about this apartment? Check any that apply:</p>
+				
+				<form method = "post" action = "https://csunix.mohawkcollege.ca/tooltime/showit.pl">
+				
+					<input type = "hidden" name = "formname" value = "Apartment">
+					<input type = "checkbox" id = "discovered" name = "online" value = "Web Search">
+					<label for = "discovered">Web Search</label>
+					
+					<input type = "checkbox" id = "discovered" name = "persons" value = "Friend">
+					<label for = "discovered"> Friend </label>
+					
+					<input type = "checkbox" id = "discovered" name = "paper" value = "Newspaper">
+					<label for = "discovered">Newspaper</label><br>
+					
+					<input type = "submit" name = "send" value = "Submit">
+					<input type = "reset" name = "cancel" value = "Reset Form">
+				</form>
+			</div><!--left1 closed-->
+			
+			<div class = "middle1">
+				<h2>Apartment Services:</h2>
+				
+				<table>
+					<thead>
+						<tr>
+							<th>Service</th>
+							<th>Day/Hours</th>
+						</tr>
+					</thead>
+					
+					<tr>
+						<td>Gym</td>
+						<td rowspan = "2">Monday-Friday 6am - 10pm<br>
+										  Saturday 8am - 8pm<br>
+										  Sunday 8am -5pm</td>
+					</tr>
+					
+					<tr>
+						<td>Pool</td>
+						<!--<td></td>-->
+					</tr>
+					
+					<tr>
+						<td>Laundry</td>
+						<td>24/7</td>
+					</tr>
+					
+					<tr>
+						<td colspan = "2" class = "green">Please do not allow people you do not know to use these facilities. </td>
+						<!--<td></td>-->
+					</tr>
+				</table>
+			</div><!--middle1 closed-->
+			
+			<div class = "right1">
+				<h2>Location</h2>
+				<img src = "images/location.png" alt = "city map">
+			</div><!--right1 closed-->
+			
+			<div class = "left2">
+				<h2>Gallery</h2>
+				<div class = "gallery">
+				  <div>
+					<figcaption>Balcony</figcaption>
+					<img src = "thumbnails/balcony_sm.jpg" alt = "balcony">
+				  </div>
+				  
+				  <div>
+					<figcaption>Bathroom</figcaption>
+					<img src = "thumbnails/bathroom_sm.jpg" alt = "bathroom">
+				  </div>
+				  
+				  <div>
+					<figcaption>Bedroom</figcaption>
+					<img src = "thumbnails/bedroom_sm.jpg" alt = "bedroom">
+				  </div>
+				  
+				  <div>
+					<figcaption>Dining Room</figcaption>
+					<img src = "thumbnails/diningroom_sm.jpg" alt = "diningroom">
+				  </div>
+				  
+				  <div>
+					<figcaption>Kitchen</figcaption>
+					<img src = "thumbnails/kitchen_sm.jpg" alt = "kitchen">
+				  </div>
+				  
+				  <div>
+					<figcaption>Living Room</figcaption>
+					<img src = "thumbnails/livingroom_sm.jpg" alt = "livingroom">
+				  </div>
+				</div><!--gallery closed-->
+			</div><!--left2 closed-->
+			
+			<div class = "end">
+				<footer>
+					<p>For more information contact: <a href = "mailto:SandyAndLeslie@example.com">SandyAndLeslie@example.com</a> or <a href = "tel:(905) 555-1234">(905) 555-1234</a> <br>Sandy and Leslie 2022</p> 
+				</footer>
+			</div><!--end closed-->
+		    </div><!--gridcontainer closed-->
+			
+		</body>
+		
+	</html>

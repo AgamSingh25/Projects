@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+    <title>Bouncing Ball</title>
+    <link rel="stylesheet" href="g.css">
+    <script src="game.js"></script>
+</head>
+<body>
+    <svg id="headingcontainer" width="800" height="50" style="font-size: 20pt">
+        <text id="heading" class="noselect" x="400" y="25">Bouncing Ball</text>
+    </svg>
+
+    <div class = "instructions">
+        <p> How to play :- </p>
+
+        <ul>
+            <li>To move the paddle to rigth, press and hold the <strong>right button</strong> on the mouse.</li>
+            <li>To move the paddle to left, press and hold the <strong>left button</strong> on the mouse.</li>
+        </ul>
+
+        <p>Select the difficulty level:</p>       
+        <input type = "radio" id = "easy" value = "1" name = "difficulty" onclick= "setLevel()">
+        <label for = "easy">Easy</label>
+
+        <input type = "radio" id = "med" value = "2" name = "difficulty" onclick= "setLevel()" checked>
+        <label for = "med">Medium</label>
+
+        <input type = "radio" id = "hard" value = "3" name = "difficulty" onclick= "setLevel()">
+        <label for = "hard">Hard</label>
+
+        <p id = "selectedDifficulty">Selected Difficulty: </p>
+
+        <p id = "output"></p>
+    </div>
+
+    <div class = "data">
+        <p class = "score" id = "score">Score: 0</p><br>
+    </div>
+
+    <div class="gameZone">
+        <svg id="board" width="500" height="500" style="background-color: black" viewbox="0,0,1000,1000">
+            <!-- All items added dynamically -->
+        </svg>
+
+        <p>
+            <button id="start">Start</button>
+        </p>
+    </div>
+
+    <footer>
+        <p> &copy; Agam Singh, 000903500, 2023</p>
+    </footer>
+
+</body>
+</html>

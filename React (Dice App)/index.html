@@ -1,0 +1,114 @@
+<!-- StAuth10244: I Agam Singh, 000903500 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+
+    <!-- Include React and Babel scripts -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <!-- Container div for React app output -->
+    <div id="output"></div>
+
+    <!-- Script section for React components -->
+    <script type="text/babel">
+        // Define a functional component for each dice
+        const Dice = ({ number, onClick }) => {
+            return <div className="dice" onClick={onClick}>{number}</div>;
+        };
+
+        // Define the main body component
+        class App extends React.Component {
+            constructor() {
+                super();
+                // Starting state with default values
+                this.state = {
+                    numberOfDice: 1,
+                    numberOfSides: 6,
+                    diceValues: Array(1).fill(1), // Array to store values of each dice
+                };
+            }
+
+            // Method to increment the number of dice
+            incrementNumberOfDice = () => {
+                this.setState(prevState => ({
+                    numberOfDice: prevState.numberOfDice + 1,
+                    diceValues: [...prevState.diceValues, 1], // Add a new dice with default value 1
+                }));
+            }
+
+            // Method to reset the number of dice to 1
+            resetNumberOfDice = () => {
+                this.setState({
+                    numberOfDice: 1,
+                    diceValues: [1], // Reset to single dice with default value 1
+                });
+            }
+
+            // Method to change the number of sides on each dice
+            changeNumberOfSides = (value) => {
+                this.setState(prevState => ({
+                    numberOfSides: prevState.numberOfSides + value,
+                }));
+            }
+
+            // Method to roll all the dice
+            rollDice = () => {
+                this.setState(prevState => ({
+                    diceValues: prevState.diceValues.map(() => Math.floor(Math.random() * prevState.numberOfSides) + 1),
+                }));
+            }
+
+            // Method to increment the value of a specific dice when clicked
+            diceClickIncrement = (index) => {
+                this.setState(prevState => {
+                    const newDiceValues = [...prevState.diceValues];
+                    newDiceValues[index] = (newDiceValues[index] % prevState.numberOfSides) + 1;
+                    return { diceValues: newDiceValues };
+                });
+            }
+
+            render() {
+                const { numberOfDice, numberOfSides, diceValues } = this.state;
+
+                return (
+                    // Main container for the app
+                    <div className="container">
+                        <div>
+                            {/* Label to display and increment the number of dice */}
+                            <label className="label" onClick={this.incrementNumberOfDice}>Number of Dice: {numberOfDice}</label>
+                            {/* Button to reset the number of dice */}
+                            <button className="button" onClick={this.resetNumberOfDice}>Reset</button>
+                        </div>
+                        {/* Render each dice component */}
+                        {diceValues.map((value, index) => (
+                            <Dice key={index} number={value} onClick={() => this.diceClickIncrement(index)} />
+                        ))}
+                        <div>
+                            {/* Label to display and change the number of sides on each dice */}
+                            <label className="label">Number of Sides: {numberOfSides}</label>
+                            {/* Buttons to increment and decrement the number of sides */}
+                            <button className="button" onClick={() => this.changeNumberOfSides(-1)} disabled={numberOfSides === 1}>-</button>
+                            <button className="button" onClick={() => this.changeNumberOfSides(1)} disabled={numberOfSides === 20}>+</button>
+                        </div>
+                        {/* Button to roll all the dice */}
+                        <button className="button" onClick={this.rollDice}>Roll</button>
+                    </div>
+                );
+            }
+        }
+
+        // Render the App component to the DOM
+        ReactDOM.render(<App />, document.getElementById('output'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+.spin {
+  animation: spin 3s linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* setting dimensions of elements */
+#timerValue{
+    width: 200px;
+    height: 40px;
+    margin: 7px;
+}
+
+#randomizeButton{
+    margin: 7px;
+    width: 200px;
+    height: 40px;
+}
+
+#counter{
+  margin: 7px;
+  width: 200px;
+  height: 40px;
+  font-size: 24px;
+}
+
+/* setting dimensions of timer display and setting the background color to green */
+#timerDisplay{
+  margin: 7px;
+  width: 200px;
+  height: 40px;
+  font-size: 24px;
+  background-color: green;
+}
+

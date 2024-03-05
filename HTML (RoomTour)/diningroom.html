@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+	<html lang = "en">
+		<head>
+			<!--Agam Singh, 000903500-->
+			<meta charset = "UTF-8">
+			<title>Sandy and Leslie's apartment</title>
+			<style>
+			
+			</style>
+			<link rel = "stylesheet" href = "css/apartment_layout.css">
+		</head>
+		
+		<body>
+		
+			<div class = "apartmentmap">
+				<header>
+					<h1>Sandy and Leslie's Apartment</h1>
+					<figcaption>Click a room for a detailed view</figcaption>
+					<img src = "images/apartmentfloorplan.jpg" alt = "floorplan" usemap = "#floormap">				
+				</header>
+				
+				<map name = "floormap">
+					<area shape = "poly" coords = "387,105,392,235,494,239,500,308,581,309,555,100" alt = "bedroom" href = "bedroom.html">
+					<area shape = "rect" coords = "25,264,193,104" alt = "bedroom" href = "bedroom.html">
+					<area shape = "rect" coords = "192,272,347,114" alt = "livingroom" href = "livingroom.html">
+					<area shape = "rect" coords = "185,286,291,390" alt = "kitchen" href = "kitchen.html">
+					<area shape = "circle" coords = "343,340,382,346" alt = "diningroom" href = "diningroom.html">
+				</map>
+				
+				<nav>
+					<ul>
+						<li> <a href = "apartment.html"> Apartment | </a></li>
+						<li> <a href = "bedroom.html">  Bedroom 1 | </a></li>
+						<li> <a href = "bedroom.html">  Bedroom 2 | </a></li>
+						<li> <a href = "diningroom.html">  Dining Room | </a></li>
+						<li> <a href = "kitchen.html">  Kitchen | </a></li>
+						<li> <a href = "livingroom.html">  Living Room </a></li>
+					</ul>
+				</nav>
+			</div><!--apartment closed-->
+				
+			<div class = "detail">
+				<h2>Diningroom details</h2>
+				<img src = "images/diningroom_lg.jpg" alt = "diningroom">
+			</div><!--detail closed-->
+			
+			<div class = "middle1">
+				<h2>Apartment Services:</h2>
+				
+				<table>
+					<thead>
+						<tr>
+							<th>Service</th>
+							<th>Day/Hours</th>
+						</tr>
+					</thead>
+					
+					<tr>
+						<td>Gym</td>
+						<td rowspan = "2">Monday-Friday 6am - 10pm<br>
+										  Saturday 8am - 8pm<br>
+										  Sunday 8am -5pm</td>
+					</tr>
+					
+					<tr>
+						<td>Pool</td>
+						<!--<td></td>-->
+					</tr>
+					
+					<tr>
+						<td>Laundry</td>
+						<td>24/7</td>
+					</tr>
+					
+					<tr>
+						<td colspan = "2" class = "green">Please do not allow people you do not know to use these facilities. </td>
+						<!--<td></td>-->
+					</tr>
+				</table>
+			</div><!--middle1 closed-->
+			
+			<div class = "end">
+				<footer>
+					<p>For more information contact: <a href = "mailto:SandyAndLeslie@example.com">SandyAndLeslie@example.com</a> or <a href = "tel:(905) 555-1234">(905) 555-1234</a> <br>Sandy and Leslie 2022</p> 
+				</footer>
+			</div><!--end closed-->
+			
+		</body>
+		
+	</html>

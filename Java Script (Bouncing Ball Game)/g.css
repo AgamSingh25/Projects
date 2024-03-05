@@ -1,0 +1,73 @@
+#heading {
+    background-color:black;
+    stroke:pink;
+    animation-name: startup;
+    animation-duration: 3s;
+    stroke-width: 1;
+    font-size:24pt;
+    text-anchor:middle;
+    font-variant: small-caps;
+}
+
+.noselect {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+@keyframes startup {
+    from 
+    {
+        stroke : black;
+        font-size : 0pt;
+    }
+          
+    to 
+    {
+        stroke : pink;
+        font-size : 24pt;
+    }
+}
+
+
+body {margin:0; 
+      background-color:black; 
+      font-family: "Comic Sans MS", "Comic Sans", cursive; 
+      color:lightblue;
+      margin-left:auto;margin-right:auto;
+      text-align:center
+}
+
+.instructions{
+    text-align: left;
+    width: 300px;
+}
+
+.data{
+    font-size: 20pt;
+    margin-top: -26%;
+}
+
+.gameZone{
+    margin-top: -5%;
+}
+
+#output{
+    color: red;
+}
+
+#board {border:2px solid lightblue; 
+        margin:10px; background-color:black;
+        border-radius:20px
+} 
+button {padding:12px; 
+        margin: 5px 20px 5px 20px; 
+        background-color:lightblue; 
+        border: 3px solid lightblue; 
+        color:black; 
+        border-radius:10px;
+        font-family:"Comic Sans MS", "Comic Sans", cursive; 
+        font-size:14pt
+        
+}

@@ -1,0 +1,32 @@
+.apartmentmap{
+	          text-align: center;
+             }
+			 
+.apartmentmap ul li{
+	                display: inline;
+                   }
+				   
+h2{
+	background-color: yellow;
+  }
+  
+.middle1 table, th, td{
+	                   border: 1px solid black;
+					   border-collapse: collapse;
+                      }
+					  
+table thead{
+	        background-color: grey;
+           }
+		   
+.green{
+	   background-color: #D1FFBD;
+      }
+	  
+.detail img{
+			text-align: center;
+		   }
+		   
+.detail h2{
+	       text-align: center;
+          }

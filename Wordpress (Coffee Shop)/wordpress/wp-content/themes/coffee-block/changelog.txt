@@ -1,0 +1,6 @@
+= 1.1 =
+i)   Compatibility with WordPress 6.4
+ii)  Added company footer credits
+
+= 1.0 =
+* Initial version release.
