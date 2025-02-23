@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">A1 Singh - 000903500</string>
+
+    <!-- Currency Names -->
+    <string-array name="currencies">
+        <item>US Dollar</item>
+        <item>Thai Baht</item>
+        <item>Indian Rupee</item>
+        <item>Japanese Yen</item>
+        <item>Pakistani Rupee</item>
+    </string-array>
+
+    <!-- Corresponding Conversion Rates -->
+    <!-- https://www.xe.com/currencyconverter/ -->
+    <string-array name="conversion_rates">
+        <item>0.69</item>
+        <item>23.58</item>
+        <item>61.05</item>
+        <item>106.26</item>
+        <item>194.47</item>
+    </string-array>
+
+</resources>
